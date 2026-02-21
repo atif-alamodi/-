@@ -1,211 +1,595 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>روابط مهمة لطلاب الذكاء الاصطناعي التوليدي</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>روابط مهمة لطلاب الذكاء الاصطناعي التوليدي</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+  <!-- Google Font (Arabic) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
-<style>
+  <style>
+    :root{
+      --bg0:#070A12;
+      --bg1:#0B1020;
+      --stroke:rgba(255,255,255,.10);
+      --text:#EEF3FF;
+      --muted:#B9C6FFcc;
 
-body{
-  margin:0;
-  font-family:"Tajawal", sans-serif;
-  background: radial-gradient(circle at top, #1b2a4a, #060914);
-  color:#fff;
-}
+      --a:#7C3AED; /* violet */
+      --b:#22D3EE; /* cyan */
+      --c:#F59E0B; /* amber */
+      --d:#10B981; /* emerald */
+      --e:#FB7185; /* rose */
+      --f:#60A5FA; /* blue */
 
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:40px 20px;
-}
+      --shadow: 0 24px 70px rgba(0,0,0,.55);
+      --shadow2: 0 18px 40px rgba(0,0,0,.40);
+      --r: 22px;
+    }
 
-h1{
-  text-align:center;
-  font-weight:900;
-  margin-bottom:40px;
-}
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:20px;
-}
+    body{
+      margin:0;
+      font-family: "Tajawal", system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans Arabic", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1100px 620px at 20% 10%, rgba(124,58,237,.35), transparent 60%),
+        radial-gradient(900px 520px at 85% 20%, rgba(34,211,238,.28), transparent 62%),
+        radial-gradient(900px 620px at 55% 85%, rgba(245,158,11,.20), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1) 55%, #070A12 100%);
+      overflow-x:hidden;
+    }
 
-.card{
-  background:rgba(255,255,255,0.06);
-  border-radius:20px;
-  border:1px solid rgba(255,255,255,0.15);
-  backdrop-filter:blur(14px);
-  box-shadow:0 20px 40px rgba(0,0,0,.4);
-  overflow:hidden;
-  transition:.3s;
-}
+    /* Subtle animated gradient haze (no JS) */
+    .haze{
+      position:fixed; inset:-40px;
+      background:
+        radial-gradient(420px 360px at 20% 30%, rgba(16,185,129,.16), transparent 70%),
+        radial-gradient(520px 420px at 70% 30%, rgba(251,113,133,.14), transparent 70%),
+        radial-gradient(620px 520px at 45% 70%, rgba(96,165,250,.12), transparent 72%);
+      filter: blur(18px);
+      opacity:.9;
+      pointer-events:none;
+      animation: floaty 10s ease-in-out infinite alternate;
+      transform: translate3d(0,0,0);
+    }
+    @keyframes floaty{
+      from{ transform: translate3d(-10px, -6px, 0) scale(1); }
+      to{ transform: translate3d(12px, 10px, 0) scale(1.02); }
+    }
 
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 30px 60px rgba(0,0,0,.6);
-}
+    .wrap{
+      position:relative;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 44px 18px 80px;
+    }
 
-summary{
-  list-style:none;
-  cursor:pointer;
-  padding:20px;
-  font-size:18px;
-  font-weight:900;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
+    /* Header */
+    header{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      margin-top:12px;
+      margin-bottom:22px;
+    }
 
-summary::-webkit-details-marker{display:none;}
+    .brand{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
 
-.title a{
-  color:#fff;
-  text-decoration:none;
-}
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
 
-.title a:hover{ text-decoration:underline; }
+    .mark{
+      width:46px; height:46px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(124,58,237,.85), rgba(34,211,238,.75));
+      box-shadow: 0 12px 35px rgba(124,58,237,.22), 0 10px 26px rgba(34,211,238,.14);
+      position:relative;
+      border:1px solid rgba(255,255,255,.18);
+      overflow:hidden;
+      flex:0 0 auto;
+    }
+    .mark:before{
+      content:"";
+      position:absolute; inset:-20px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 45%),
+        radial-gradient(circle at 70% 70%, rgba(255,255,255,.18), transparent 50%);
+      transform: rotate(12deg);
+    }
 
-.content{
-  padding:0 20px 20px;
-  font-size:15px;
-  line-height:1.9;
-  color:#e5e7ff;
-}
+    .logo h1{
+      margin:0;
+      font-size: clamp(22px, 2.5vw, 30px);
+      letter-spacing:.2px;
+      line-height:1.2;
+      font-weight:900;
+    }
 
-.btn{
-  display:block;
-  text-align:center;
-  margin-top:18px;
-  padding:14px;
-  border-radius:14px;
-  text-decoration:none;
-  font-weight:900;
-  background:linear-gradient(135deg,#7c3aed,#22d3ee);
-  color:white;
-  transition:.2s;
-}
+    .subtitle{
+      margin:0;
+      color:var(--muted);
+      font-size: 15px;
+      line-height:1.85;
+      max-width: 80ch;
+    }
 
-.btn:hover{
-  transform:scale(1.04);
-}
+    /* Grid */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
 
-</style>
+    .card{
+      grid-column: span 6;
+      background: linear-gradient(180deg, rgba(14,22,48,.85), rgba(12,18,38,.75));
+      border:1px solid var(--stroke);
+      border-radius: var(--r);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+      position:relative;
+      backdrop-filter: blur(12px);
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+    .card:hover{
+      transform: translateY(-3px);
+      border-color: rgba(255,255,255,.18);
+      box-shadow: var(--shadow);
+    }
+
+    /* Accent ribbon */
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(700px 220px at 15% 0%, rgba(124,58,237,.28), transparent 55%),
+        radial-gradient(700px 220px at 85% 0%, rgba(34,211,238,.22), transparent 55%);
+      pointer-events:none;
+      opacity:.9;
+    }
+
+    /* Details */
+    details{ position:relative; }
+    summary{
+      list-style:none;
+      cursor:pointer;
+      padding: 18px 18px 16px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:14px;
+      position:relative;
+    }
+    summary::-webkit-details-marker{ display:none; }
+
+    .left{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+      min-width:0;
+      flex:1;
+    }
+
+    .icon{
+      width:44px; height:44px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.06);
+      display:grid;
+      place-items:center;
+      box-shadow: 0 10px 25px rgba(0,0,0,.25);
+      position:relative;
+      overflow:hidden;
+      flex:0 0 auto;
+    }
+    .icon::before{
+      content:"";
+      position:absolute; inset:-30px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.28), transparent 55%);
+      transform: rotate(20deg);
+      opacity:.8;
+    }
+    .glyph{
+      width:22px; height:22px;
+      position:relative;
+      z-index:2;
+    }
+
+    .siteTitle{
+      margin:0;
+      font-size: 18px;
+      line-height:1.4;
+      font-weight: 900;
+      letter-spacing:.2px;
+      word-break: break-word;
+    }
+    .siteTitle a{
+      color: var(--text);
+      text-decoration:none;
+      position:relative;
+    }
+    .siteTitle a:hover{
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 6px;
+    }
+
+    .meta{
+      margin-top:6px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height:1.7;
+    }
+
+    .chev{
+      flex:0 0 auto;
+      width:42px; height:42px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.05);
+      display:grid;
+      place-items:center;
+      transition: transform .25s ease, background .25s ease;
+      box-shadow: 0 10px 22px rgba(0,0,0,.22);
+      user-select:none;
+    }
+    details[open] .chev{
+      transform: rotate(180deg);
+      background: rgba(255,255,255,.08);
+    }
+
+    .content{
+      padding: 0 18px 18px;
+      position:relative;
+    }
+
+    .divider{
+      height:1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+      margin: 0 0 14px;
+    }
+
+    .desc{
+      margin: 0 0 14px;
+      color: rgba(238,243,255,.92);
+      line-height: 1.9;
+      font-size: 14.5px;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin: 12px 0 16px;
+    }
+    .chip{
+      padding: 9px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      color: rgba(238,243,255,.95);
+      font-weight: 800;
+      font-size: 12.5px;
+      letter-spacing:.1px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    .chip .tinyDot{
+      width:8px; height:8px; border-radius:999px;
+      background: linear-gradient(135deg, var(--b), var(--a));
+      box-shadow: 0 0 0 3px rgba(124,58,237,.12);
+    }
+
+    .ctaRow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      margin-top: 14px;
+    }
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      text-decoration:none;
+      font-weight: 900;
+      font-size: 14px;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      box-shadow: 0 12px 30px rgba(0,0,0,.28);
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+      min-width: 210px;
+    }
+    .cta:hover{
+      transform: translateY(-2px);
+      background: rgba(255,255,255,.10);
+      border-color: rgba(255,255,255,.20);
+    }
+    .smallLink{
+      color: var(--muted);
+      font-weight:700;
+      text-decoration:none;
+      border-bottom: 1px dashed rgba(185,198,255,.45);
+      padding-bottom:2px;
+    }
+    .smallLink:hover{
+      color: rgba(238,243,255,.95);
+      border-bottom-color: rgba(238,243,255,.75);
+    }
+
+    /* Per-card accent variations */
+    .accent-ossu .icon{ background: rgba(124,58,237,.16); border-color: rgba(124,58,237,.35); }
+    .accent-ossu .chip .tinyDot{ background: linear-gradient(135deg, var(--a), var(--f)); }
+    .accent-ossu .cta{ background: linear-gradient(135deg, rgba(124,58,237,.30), rgba(96,165,250,.18)); }
+
+    .accent-cp .icon{ background: rgba(34,211,238,.14); border-color: rgba(34,211,238,.35); }
+    .accent-cp .chip .tinyDot{ background: linear-gradient(135deg, var(--b), var(--f)); }
+    .accent-cp .cta{ background: linear-gradient(135deg, rgba(34,211,238,.28), rgba(96,165,250,.14)); }
+
+    .accent-bigO .icon{ background: rgba(245,158,11,.14); border-color: rgba(245,158,11,.35); }
+    .accent-bigO .chip .tinyDot{ background: linear-gradient(135deg, var(--c), var(--e)); }
+    .accent-bigO .cta{ background: linear-gradient(135deg, rgba(245,158,11,.26), rgba(251,113,133,.14)); }
+
+    .accent-shell .icon{ background: rgba(16,185,129,.14); border-color: rgba(16,185,129,.35); }
+    .accent-shell .chip .tinyDot{ background: linear-gradient(135deg, var(--d), var(--b)); }
+    .accent-shell .cta{ background: linear-gradient(135deg, rgba(16,185,129,.26), rgba(34,211,238,.12)); }
+
+    .accent-roadmap .icon{ background: rgba(96,165,250,.14); border-color: rgba(96,165,250,.35); }
+    .accent-roadmap .chip .tinyDot{ background: linear-gradient(135deg, var(--f), var(--a)); }
+    .accent-roadmap .cta{ background: linear-gradient(135deg, rgba(96,165,250,.26), rgba(124,58,237,.14)); }
+
+    @media (max-width: 860px){
+      .card{ grid-column: span 12; }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="haze"></div>
 
-<div class="container">
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">
+          <div class="mark" aria-hidden="true"></div>
+          <div>
+            <h1>روابط مهمة لطلاب الذكاء الاصطناعي التوليدي</h1>
+            <p class="subtitle">
+              صفحة واحدة أنيقة تجمع أهم المواقع التي يحتاجها طالب الذكاء الاصطناعي التوليدي:
+              مسارات تعلم، محاكيات، مراجع خوارزميات، وأدوات تقنية عملية — مع شرح مختصر داخل قوائم منسدلة.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
 
-<h1>روابط مهمة لطلاب الذكاء الاصطناعي التوليدي</h1>
+    <section class="grid">
 
-<div class="grid">
+      <!-- OSSU -->
+      <article class="card accent-ossu">
+        <details>
+          <summary>
+            <div class="left">
+              <div class="icon" aria-hidden="true">
+                <svg class="glyph" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 7h10M7 12h10M7 17h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h2 class="siteTitle">
+                  <a href="https://github.com/ossu/computer-science" target="_blank" rel="noopener">
+                    OSSU — Computer Science
+                  </a>
+                </h2>
+                <div class="meta">منهج علوم حاسب كامل ومجاني بمستوى جامعي.</div>
+              </div>
+            </div>
+            <div class="chev" aria-hidden="true">⌄</div>
+          </summary>
 
-<!-- OSSU -->
-<div class="card">
-<details>
-<summary>
-<div class="title">
-<a href="https://github.com/ossu/computer-science" target="_blank">
-OSSU — Computer Science
-</a>
-</div>
-</summary>
-<div class="content">
-منهج علوم حاسب كامل مجاني بمستوى جامعي يغطي الرياضيات والخوارزميات
-ونظم التشغيل وقواعد البيانات والذكاء الاصطناعي.
-<a class="btn" href="https://github.com/ossu/computer-science" target="_blank">
-فتح الموقع
-</a>
-</div>
-</details>
-</div>
+          <div class="content">
+            <div class="divider"></div>
+            <p class="desc">
+              مسار متكامل لتأسيسك في علوم الحاسب (رياضيات، هياكل بيانات وخوارزميات، نظم تشغيل،
+              قواعد بيانات، شبكات، وهندسة برمجيات) مع روابط لمصادر ممتازة وخطة واضحة.
+            </p>
+            <div class="chips">
+              <span class="chip"><span class="tinyDot"></span>منهج شامل</span>
+              <span class="chip"><span class="tinyDot"></span>مستوى جامعي</span>
+              <span class="chip"><span class="tinyDot"></span>مجاني</span>
+            </div>
+            <div class="ctaRow">
+              <a class="cta" href="https://github.com/ossu/computer-science" target="_blank" rel="noopener">فتح المنهج</a>
+              <a class="smallLink" href="https://github.com/ossu/computer-science" target="_blank" rel="noopener">الرابط مرة أخرى</a>
+            </div>
+          </div>
+        </details>
+      </article>
 
-<!-- CPULator -->
-<div class="card">
-<details>
-<summary>
-<div class="title">
-<a href="https://cpulator.01xz.net" target="_blank">
-CPULator
-</a>
-</div>
-</summary>
-<div class="content">
-محاكي لمعالجات ARM و MIPS يعمل بالكامل أونلاين لتجربة Assembly
-ومعماريات الحاسوب بدون تثبيت أي برامج.
-<a class="btn" href="https://cpulator.01xz.net" target="_blank">
-فتح الموقع
-</a>
-</div>
-</details>
-</div>
+      <!-- CPULator -->
+      <article class="card accent-cp">
+        <details>
+          <summary>
+            <div class="left">
+              <div class="icon" aria-hidden="true">
+                <svg class="glyph" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 7h10v10H7z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M9 9h6M9 12h6M9 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h2 class="siteTitle">
+                  <a href="https://cpulator.01xz.net" target="_blank" rel="noopener">CPULator</a>
+                </h2>
+                <div class="meta">محاكي ARM/MIPS لتجربة Assembly ومعمارية الحاسوب أونلاين.</div>
+              </div>
+            </div>
+            <div class="chev" aria-hidden="true">⌄</div>
+          </summary>
 
-<!-- Big O -->
-<div class="card">
-<details>
-<summary>
-<div class="title">
-<a href="https://www.bigocheatsheet.com" target="_blank">
-Big-O Cheat Sheet
-</a>
-</div>
-</summary>
-<div class="content">
-مرجع سريع لتعقيد الخوارزميات وهياكل البيانات مفيد جدًا للمقابلات
-التقنية وفهم الأداء والسرعة.
-<a class="btn" href="https://www.bigocheatsheet.com" target="_blank">
-فتح الموقع
-</a>
-</div>
-</details>
-</div>
+          <div class="content">
+            <div class="divider"></div>
+            <p class="desc">
+              يتيح لك تشغيل أمثلة وتجارب مباشرة على ARM و MIPS دون تثبيت أدوات.
+              مناسب لتعلم التعليمات والسجلات والذاكرة عمليًا مع بيئة سهلة وسريعة.
+            </p>
+            <div class="chips">
+              <span class="chip"><span class="tinyDot"></span>Assembly</span>
+              <span class="chip"><span class="tinyDot"></span>محاكاة مباشرة</span>
+              <span class="chip"><span class="tinyDot"></span>بدون تثبيت</span>
+            </div>
+            <div class="ctaRow">
+              <a class="cta" href="https://cpulator.01xz.net" target="_blank" rel="noopener">فتح CPULator</a>
+              <a class="smallLink" href="https://cpulator.01xz.net" target="_blank" rel="noopener">الرابط مرة أخرى</a>
+            </div>
+          </div>
+        </details>
+      </article>
 
-<!-- ExplainShell -->
-<div class="card">
-<details>
-<summary>
-<div class="title">
-<a href="https://explainshell.com" target="_blank">
-ExplainShell
-</a>
-</div>
-</summary>
-<div class="content">
-اكتب أي أمر Terminal وسيقوم الموقع بشرح كل جزء منه بالتفصيل،
-ممتاز لتعلم Linux و DevOps.
-<a class="btn" href="https://explainshell.com" target="_blank">
-فتح الموقع
-</a>
-</div>
-</details>
-</div>
+      <!-- Big-O -->
+      <article class="card accent-bigO">
+        <details>
+          <summary>
+            <div class="left">
+              <div class="icon" aria-hidden="true">
+                <svg class="glyph" viewBox="0 0 24 24" fill="none">
+                  <path d="M6 18V6M6 18h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M9 14l2-3 2 2 3-5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h2 class="siteTitle">
+                  <a href="https://www.bigocheatsheet.com" target="_blank" rel="noopener">Big-O Cheat Sheet</a>
+                </h2>
+                <div class="meta">مرجع سريع لتعقيد الزمن/المساحة للخوارزميات وهياكل البيانات.</div>
+              </div>
+            </div>
+            <div class="chev" aria-hidden="true">⌄</div>
+          </summary>
 
-<!-- Roadmap -->
-<div class="card">
-<details>
-<summary>
-<div class="title">
-<a href="https://roadmap.sh" target="_blank">
-Roadmap.sh
-</a>
-</div>
-</summary>
-<div class="content">
-خرائط طريق احترافية لتعلم مجالات التقنية مثل Backend و DevOps
-و Cyber Security و AI خطوة بخطوة.
-<a class="btn" href="https://roadmap.sh" target="_blank">
-فتح الموقع
-</a>
-</div>
-</details>
-</div>
+          <div class="content">
+            <div class="divider"></div>
+            <p class="desc">
+              مفيد عند اختيار بنية البيانات المناسبة أو مقارنة أداء الخوارزميات (بحث/ترتيب/إدراج/حذف).
+              ممتاز للمراجعة قبل المقابلات التقنية.
+            </p>
+            <div class="chips">
+              <span class="chip"><span class="tinyDot"></span>Big-O</span>
+              <span class="chip"><span class="tinyDot"></span>مقابلات تقنية</span>
+              <span class="chip"><span class="tinyDot"></span>مرجع سريع</span>
+            </div>
+            <div class="ctaRow">
+              <a class="cta" href="https://www.bigocheatsheet.com" target="_blank" rel="noopener">فتح المرجع</a>
+              <a class="smallLink" href="https://www.bigocheatsheet.com" target="_blank" rel="noopener">الرابط مرة أخرى</a>
+            </div>
+          </div>
+        </details>
+      </article>
 
-</div>
-</div>
+      <!-- ExplainShell -->
+      <article class="card accent-shell">
+        <details>
+          <summary>
+            <div class="left">
+              <div class="icon" aria-hidden="true">
+                <svg class="glyph" viewBox="0 0 24 24" fill="none">
+                  <path d="M6 8l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 16h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h2 class="siteTitle">
+                  <a href="https://explainshell.com" target="_blank" rel="noopener">ExplainShell</a>
+                </h2>
+                <div class="meta">يفكك أوامر الطرفية ويشرح كل خيار ومعامل بالتفصيل.</div>
+              </div>
+            </div>
+            <div class="chev" aria-hidden="true">⌄</div>
+          </summary>
 
+          <div class="content">
+            <div class="divider"></div>
+            <p class="desc">
+              اكتب أمر Bash وسيقوم بشرح كل جزء منه. رائع لتعلم Linux، ولتفهم أوامر DevOps المعقدة بسرعة
+              بدل الحفظ دون فهم.
+            </p>
+            <div class="chips">
+              <span class="chip"><span class="tinyDot"></span>Linux</span>
+              <span class="chip"><span class="tinyDot"></span>DevOps</span>
+              <span class="chip"><span class="tinyDot"></span>شرح فوري</span>
+            </div>
+            <div class="ctaRow">
+              <a class="cta" href="https://explainshell.com" target="_blank" rel="noopener">فتح ExplainShell</a>
+              <a class="smallLink" href="https://explainshell.com" target="_blank" rel="noopener">الرابط مرة أخرى</a>
+            </div>
+          </div>
+        </details>
+      </article>
+
+      <!-- Roadmap.sh -->
+      <article class="card accent-roadmap">
+        <details>
+          <summary>
+            <div class="left">
+              <div class="icon" aria-hidden="true">
+                <svg class="glyph" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 7h6v6H7z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M13 10h4M13 14h4M7 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h2 class="siteTitle">
+                  <a href="https://roadmap.sh" target="_blank" rel="noopener">Roadmap.sh</a>
+                </h2>
+                <div class="meta">خرائط طريق منظمة لمسارات التقنية (Backend/DevOps/AI/Cybersecurity...).</div>
+              </div>
+            </div>
+            <div class="chev" aria-hidden="true">⌄</div>
+          </summary>
+
+          <div class="content">
+            <div class="divider"></div>
+            <p class="desc">
+              يقدم خرائط تعلم واضحة خطوة بخطوة، مفيدة لتحديد ما تتعلمه بالضبط وما تتجاهله، مع ترتيب منطقي
+              يساعدك على بناء مهاراتك بشكل صحيح.
+            </p>
+            <div class="chips">
+              <span class="chip"><span class="tinyDot"></span>مسارات تعلم</span>
+              <span class="chip"><span class="tinyDot"></span>تنظيم عالي</span>
+              <span class="chip"><span class="tinyDot"></span>خطة واضحة</span>
+            </div>
+            <div class="ctaRow">
+              <a class="cta" href="https://roadmap.sh" target="_blank" rel="noopener">فتح Roadmap</a>
+              <a class="smallLink" href="https://roadmap.sh" target="_blank" rel="noopener">الرابط مرة أخرى</a>
+            </div>
+          </div>
+        </details>
+      </article>
+
+    </section>
+  </div>
 </body>
 </html>
